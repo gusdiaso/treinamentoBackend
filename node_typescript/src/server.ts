@@ -1,11 +1,11 @@
-import fastify from "fastify";
+import fastify from 'fastify';
 import roomRoutes from './routes/room_routes.js';
 
 const app = fastify();
 app.register(roomRoutes);
 
 app.get('/', async () => {
-    return 'Hello, World!'
+    return 'You are in the Room API!';
 });
 
 app.listen({ port: 3333}).then(() => {
